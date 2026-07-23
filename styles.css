@@ -248,10 +248,12 @@ a {
 .blocker {
   top: 2856px;
   height: 3322px;
+  isolation: isolate;
 }
 
 .problem-title {
   position: absolute;
+  z-index: 2;
   left: 381.5px;
   top: 132px;
   width: 360px;
@@ -267,6 +269,7 @@ a {
 
 .role-grid {
   position: absolute;
+  z-index: 2;
   left: 71.5px;
   top: 324px;
   display: grid;
@@ -341,8 +344,9 @@ a {
 
 .feature-stack {
   position: absolute;
+  z-index: 0;
   left: 0;
-  top: 559px;
+  top: 602px;
   width: 1123px;
   height: 648px;
   object-fit: contain;
