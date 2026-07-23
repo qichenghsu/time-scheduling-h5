@@ -636,9 +636,10 @@ a {
 .vibe img {
   margin-top: 64px;
   width: 960px;
-  height: 837px;
-  object-fit: cover;
-  object-position: center top;
+  height: auto;
+  aspect-ratio: 2704 / 2412;
+  object-fit: contain;
+  object-position: left top;
   border-radius: 0;
 }
 
