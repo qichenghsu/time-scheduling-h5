@@ -345,10 +345,10 @@ a {
 .feature-stack {
   position: absolute;
   z-index: 0;
-  left: 0;
-  top: 602px;
-  width: 1123px;
-  height: 648px;
+  left: 71.5px;
+  top: 548px;
+  width: 980px;
+  height: 566px;
   object-fit: contain;
 }
 
