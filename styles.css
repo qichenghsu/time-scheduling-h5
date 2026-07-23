@@ -1,0 +1,889 @@
+:root {
+  --black: #000;
+  --text: #f4f8ff;
+  --muted: rgba(255, 255, 255, 0.5);
+  --line: rgba(150, 190, 255, 0.14);
+  --panel: rgba(255, 255, 255, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  background: var(--black);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  letter-spacing: 0;
+}
+
+img {
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.viewport {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: var(--black);
+}
+
+.scale-shell {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.artboard {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1123px;
+  height: 17955px;
+  overflow: hidden;
+  transform-origin: top center;
+  margin-left: -561.5px;
+  background: var(--black);
+}
+
+.scene {
+  position: absolute;
+  left: 0;
+  width: 1123px;
+  overflow: hidden;
+  background: var(--black);
+}
+
+.cover {
+  top: 0;
+  height: 1324px;
+}
+
+.cover-image {
+  position: absolute;
+  left: 0;
+  top: -236px;
+  width: 1123px;
+  height: 1560px;
+  object-fit: cover;
+  opacity: 0.6;
+}
+
+.cover-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(270deg, #000 0%, rgba(0, 0, 0, 0) 24.98%);
+}
+
+.cover-copy {
+  position: absolute;
+  left: 161.5px;
+  top: 506px;
+  width: 800px;
+  text-align: center;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.cover h1 {
+  margin: 0;
+  font-size: 80px;
+  line-height: normal;
+  font-weight: 650;
+}
+
+.cover h1 span,
+.cover-copy p span,
+.overview h2 span,
+.chapter h2 span {
+  display: block;
+}
+
+.cover-copy p {
+  margin: 50px 0 0;
+  font-size: 30px;
+  line-height: 37.733px;
+  font-weight: 650;
+  opacity: 0.7;
+}
+
+.overview {
+  top: 1324px;
+  height: 892px;
+  padding-top: 150px;
+}
+
+.overview h2 {
+  width: 868px;
+  margin: 0 auto;
+  color: var(--text);
+  text-align: center;
+  font-size: 40px;
+  line-height: normal;
+  font-weight: 650;
+}
+
+.overview-cards {
+  position: absolute;
+  left: 16px;
+  top: 332px;
+  display: grid;
+  width: 1091px;
+  height: 410px;
+  grid-template-columns: repeat(3, 343.66px);
+  gap: 30px;
+}
+
+.overview-card,
+.closing-grid article {
+  position: relative;
+  min-height: 410px;
+  padding: 50px 32px;
+  overflow: hidden;
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 92% 4%, rgba(169, 203, 255, 0.26), rgba(85, 101, 128, 0.13) 21%, transparent 42%),
+    linear-gradient(180deg, #10162a 0%, #0a1022 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(225, 245, 255, 0.08),
+    inset 0 0 42px rgba(70, 155, 255, 0.08),
+    0 28px 80px rgba(0, 0, 0, 0.36);
+}
+
+.overview-card:nth-child(2) {
+  background:
+    radial-gradient(circle at -3% 102%, rgba(255, 255, 255, 0.22), rgba(128, 128, 128, 0.11) 43%, transparent 87%),
+    linear-gradient(180deg, #101629 0%, #0b1022 100%);
+}
+
+.overview-card:nth-child(3) {
+  background:
+    radial-gradient(ellipse at 104% 37%, rgba(160, 216, 255, 0.28), rgba(80, 108, 128, 0.14) 22%, transparent 44%),
+    linear-gradient(180deg, #11172b 0%, #0b1022 100%);
+}
+
+.overview-card b {
+  position: absolute;
+  left: 31px;
+  top: 193px;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "Reddit Sans", sans-serif;
+  font-size: 55px;
+  line-height: 68px;
+  font-weight: 800;
+}
+
+.overview-card h3 {
+  position: absolute;
+  left: 32px;
+  bottom: 72px;
+  margin: 0;
+  color: var(--text);
+  font-size: 27px;
+  line-height: 31.86px;
+  font-weight: 650;
+}
+
+.overview-card p {
+  position: absolute;
+  left: 32px;
+  bottom: 44px;
+  margin: 0;
+  color: rgba(222, 232, 249, 0.72);
+  font-size: 15px;
+  line-height: 24.3px;
+  font-weight: 500;
+}
+
+.chapter {
+  height: 640px;
+  text-align: center;
+}
+
+.chapter-one {
+  top: 2216px;
+}
+
+.chapter-two {
+  top: 6178px;
+}
+
+.chapter-three {
+  top: 12641px;
+}
+
+.chapter-num {
+  margin: 194px 0 0;
+  color: #f4f8ff;
+  font-family: "Reddit Sans", sans-serif;
+  font-size: 100px;
+  line-height: 87px;
+  font-weight: 800;
+}
+
+.chapter h2 {
+  margin: 28px 0 0;
+  color: #f4f8ff;
+  font-size: 54px;
+  line-height: 62px;
+  font-weight: 650;
+}
+
+.chapter-subtitle {
+  margin: 22px 0 0;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 30px;
+  line-height: 31px;
+  font-weight: 500;
+}
+
+.blocker {
+  top: 2856px;
+  height: 3322px;
+}
+
+.problem-title {
+  position: absolute;
+  left: 381.5px;
+  top: 132px;
+  width: 360px;
+  text-align: center;
+  font-size: 40px;
+  line-height: normal;
+  font-weight: 650;
+}
+
+.problem-title span {
+  display: block;
+}
+
+.role-grid {
+  position: absolute;
+  left: 71.5px;
+  top: 324px;
+  display: grid;
+  width: 980px;
+  grid-template-columns: repeat(3, 316px);
+  gap: 16px;
+}
+
+.role-card {
+  height: 300px;
+  padding: 26px;
+  border-radius: 18px;
+  background:
+    radial-gradient(ellipse at 92% -2%, rgba(210, 226, 255, 0.2), rgba(105, 113, 128, 0.1) 17%, transparent 34%),
+    linear-gradient(180deg, rgba(18, 26, 51, 0.94) 0%, rgba(9, 14, 31, 0.96) 100%);
+}
+
+.role-card:nth-child(2) {
+  background:
+    radial-gradient(circle at 47% 100%, rgba(210, 226, 255, 0.2), rgba(105, 113, 128, 0.1) 17%, transparent 34%),
+    linear-gradient(180deg, rgba(18, 26, 51, 0.94) 0%, rgba(9, 14, 31, 0.96) 100%);
+}
+
+.role-icon {
+  display: grid;
+  width: 54px;
+  height: 54px;
+  place-items: center;
+  color: rgba(200, 225, 255, 0.72);
+  background: rgba(80, 151, 255, 0.12);
+  border-radius: 999px;
+  box-shadow: inset 0 0 18px rgba(86, 168, 255, 0.12);
+  font-size: 18px;
+}
+
+.role-icon img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.role-icon-hammer img {
+  width: 28px;
+  height: 28px;
+}
+
+.role-card h3 {
+  margin: 58px 0 0;
+  font-size: 24px;
+  line-height: normal;
+  font-weight: 700;
+}
+
+.role-card p {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 23.7px;
+  font-weight: 500;
+}
+
+.role-card p span,
+.feature-caption span,
+.interview-heading h2 span,
+.confidence-heading h2 span,
+.timeline-block h2 span,
+.timeline-block p span,
+.vision-intro h2 span,
+.vision-intro p span {
+  display: block;
+}
+
+.feature-stack {
+  position: absolute;
+  left: 0;
+  top: 559px;
+  width: 1123px;
+  height: 648px;
+  object-fit: contain;
+}
+
+.feature-caption {
+  display: none;
+  position: absolute;
+  left: 321px;
+  top: 1124px;
+  width: 480px;
+  margin: 0;
+  text-align: center;
+  color: rgba(244, 248, 255, 0.5);
+  font-size: 30px;
+  line-height: normal;
+  font-weight: 500;
+}
+
+.feature-caption strong {
+  color: #fff;
+  font-weight: 500;
+}
+
+.interview-heading,
+.confidence-heading {
+  position: absolute;
+  left: 201.5px;
+  width: 720px;
+  text-align: center;
+}
+
+.interview-heading {
+  top: 1433px;
+}
+
+.confidence-heading {
+  top: 2629px;
+}
+
+.interview-heading h2,
+.confidence-heading h2 {
+  margin: 0;
+  font-size: 39.305px;
+  line-height: 45.594px;
+  font-weight: 650;
+}
+
+.interview-heading p {
+  margin: 30px 0 0;
+  color: var(--muted);
+  font-size: 30px;
+  line-height: 28.3px;
+  font-weight: 500;
+}
+
+.confidence-heading p {
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 16.845px;
+  line-height: 28.3px;
+  font-weight: 500;
+}
+
+.interview-row {
+  position: absolute;
+  left: 71.5px;
+  top: 1679px;
+  width: 980px;
+  height: 733px;
+}
+
+.kim-shot {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 553px;
+  height: 724px;
+  object-fit: cover;
+  border-radius: 9px;
+}
+
+.question-list {
+  position: absolute;
+  left: 603.5px;
+  top: 114.923px;
+  width: 376.5px;
+}
+
+.question-list p {
+  position: relative;
+  height: 54.33px;
+  margin: 0 0 13.58px;
+  padding: 16px 20px;
+  color: #f4f8ff;
+  background: #1e1e1e;
+  border: 0.755px solid var(--line);
+  border-radius: 16.6px 16.6px 16.6px 4.527px;
+  box-shadow: 0 13.582px 13.582px rgba(0, 0, 0, 0.2);
+  font-size: 14.406px;
+  line-height: 19.88px;
+  font-weight: 650;
+  white-space: nowrap;
+}
+
+.question-list p:nth-child(2) {
+  margin-left: 33.2px;
+  width: 343.3px;
+}
+
+.question-list p:nth-child(3) {
+  margin-left: 66.4px;
+  width: 310.1px;
+}
+
+.flow-row {
+  position: absolute;
+  left: 53px;
+  top: 2861px;
+  width: 1054.667px;
+  height: 185.667px;
+  object-fit: contain;
+}
+
+.validate {
+  top: 6818px;
+  height: 5823px;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 39.5px;
+  top: 186.5px;
+  width: 1px;
+  height: 4558px;
+  background: repeating-linear-gradient(to bottom, rgba(177, 226, 253, 0.8), rgba(177, 226, 253, 0.8) 6px, transparent 6px, transparent 14px);
+}
+
+.dot {
+  position: absolute;
+  left: 28px;
+  width: 24px;
+  height: 24px;
+  background: #000;
+  border: 4px solid #a4c8df;
+  border-radius: 999px;
+  box-shadow: 0 0 24px rgba(95, 213, 255, 0.28);
+}
+
+.dot-1 { top: 159px; }
+.dot-2 { top: 1144px; }
+.dot-3 { top: 2805px; }
+.dot-4 { top: 4254px; border-color: #b1e2fd; }
+.dot-5 { top: 4729px; border-color: #b1e2fd; }
+
+.timeline-block {
+  position: absolute;
+  left: 86px;
+  width: 960px;
+}
+
+.timeline-block h2 {
+  margin: 0;
+  color: #f4f8ff;
+  font-size: 33.69px;
+  line-height: 39.08px;
+  font-weight: 650;
+}
+
+.timeline-block > p {
+  margin: 18px 0 0;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 20px;
+  line-height: 28.3px;
+  font-weight: 500;
+}
+
+.timeline-block img {
+  border-radius: 30px;
+}
+
+.qualitative {
+  top: 132px;
+}
+
+.qualitative img {
+  margin-top: 34px;
+  width: 951px;
+  height: 682px;
+  object-fit: cover;
+  object-position: top center;
+  opacity: 0.9;
+}
+
+.hypothesis {
+  top: 1136px;
+}
+
+.hypothesis-a {
+  margin-top: 34px;
+  width: 960px;
+  height: 428.525px;
+  object-fit: cover;
+}
+
+.hypothesis-b {
+  margin-top: 30px;
+  width: 960px;
+  height: 892px;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.survey {
+  top: 2778px;
+}
+
+.survey a {
+  display: inline-flex;
+  height: 42.5px;
+  margin-top: 22px;
+  align-items: center;
+  padding: 0 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.survey img {
+  margin-top: 34px;
+  width: 960px;
+  height: 1054.795px;
+  object-fit: cover;
+}
+
+.converge {
+  top: 4246px;
+}
+
+.direction-grid {
+  display: grid;
+  margin-top: 33px;
+  grid-template-columns: repeat(3, 320px);
+  gap: 14px;
+}
+
+.direction-grid div {
+  height: 265px;
+  padding: 40px;
+  border-radius: 20px;
+  background: linear-gradient(109deg, #252525 13%, #000 156%);
+}
+
+.direction-grid div:nth-child(2) {
+  background: linear-gradient(194deg, #252525 1%, #000 156%);
+}
+
+.direction-grid b {
+  display: block;
+  color: rgba(255, 255, 255, 0.3);
+  font-family: "Reddit Sans", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.direction-grid h3 {
+  margin: 34px 0 0;
+  color: #f4f8ff;
+  font-size: 25px;
+  line-height: 20.52px;
+  font-weight: 650;
+}
+
+.direction-grid p {
+  margin: 34px 0 0;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16.845px;
+  line-height: 28.3px;
+  font-weight: 500;
+}
+
+.vibe {
+  top: 4721px;
+}
+
+.vibe img {
+  margin-top: 64px;
+  width: 960px;
+  height: 837px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 0;
+}
+
+.vision {
+  top: 13281px;
+  height: 3350px;
+}
+
+.vision-intro {
+  position: absolute;
+  left: 181.5px;
+  top: 132px;
+  width: 760px;
+  text-align: center;
+}
+
+.vision-intro h2 {
+  margin: 0;
+  font-size: 30px;
+  line-height: normal;
+  font-weight: 650;
+}
+
+.vision-intro p {
+  margin: 30px auto 0;
+  width: 720px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 17.968px;
+  line-height: 30.905px;
+  font-weight: 500;
+}
+
+.vision-intro strong {
+  color: #fff;
+  font-weight: 500;
+}
+
+.quote {
+  position: absolute;
+  left: 180px;
+  width: 763px;
+}
+
+.quote-one {
+  top: 476px;
+}
+
+.quote-two {
+  top: 1918px;
+}
+
+.speaker {
+  display: flex;
+  gap: 23px;
+  align-items: flex-end;
+  color: #f4f8ff;
+  font-family: "Reddit Sans", sans-serif;
+}
+
+.speaker span {
+  font-size: 60px;
+  line-height: normal;
+  opacity: 0.9;
+}
+
+.speaker p {
+  margin: 0 0 3px;
+}
+
+.speaker b,
+.speaker em {
+  display: block;
+  font-style: normal;
+  line-height: normal;
+}
+
+.speaker b {
+  font-size: 25px;
+}
+
+.speaker em {
+  color: rgba(244, 248, 255, 0.7);
+  font-size: 20px;
+}
+
+blockquote {
+  margin: 30px 0 0;
+  padding: 30px;
+  color: rgba(244, 248, 255, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 0 40px 40px 40px;
+  font-family: "Reddit Sans", sans-serif;
+  font-size: 20px;
+  line-height: normal;
+  font-weight: 600;
+}
+
+blockquote strong {
+  color: #f4f8ff;
+}
+
+.vision-title-one,
+.vision-title-two {
+  position: absolute;
+  left: 0;
+  width: 1123px;
+  margin: 0;
+  text-align: center;
+  color: #fff;
+  font-size: 30px;
+  line-height: 30.905px;
+  font-weight: 500;
+}
+
+.vision-title-one {
+  top: 890px;
+}
+
+.vision-title-two {
+  top: 2279px;
+}
+
+.vision-caption-one {
+  position: absolute;
+  left: 184px;
+  top: 942px;
+  width: 755px;
+  margin: 0;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 20px;
+  line-height: 30.905px;
+  font-weight: 500;
+}
+
+.vision-caption-one strong {
+  color: #fff;
+}
+
+.vision-main {
+  position: absolute;
+  left: 86px;
+  top: 1041px;
+  width: 952px;
+  height: 612px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.phone-caption {
+  position: absolute;
+  top: 2353px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  font-size: 20px;
+  line-height: 30.905px;
+  font-weight: 500;
+}
+
+.manager {
+  left: 202px;
+  width: 300px;
+}
+
+.employee {
+  left: 617px;
+  width: 272px;
+}
+
+.shift-phone {
+  position: absolute;
+  left: 192px;
+  top: 2445px;
+  width: 320px;
+  height: 811px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.schedule-phone {
+  position: absolute;
+  left: 593px;
+  top: 2445px;
+  width: 320px;
+  height: 693px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.closing {
+  top: 16631px;
+  height: 1324px;
+  text-align: center;
+}
+
+.arm {
+  margin: 295px 0 0;
+  font-size: 110px;
+  line-height: 121px;
+}
+
+.closing h2 {
+  margin: 43px 0 0;
+  color: #f4f8ff;
+  font-size: 44px;
+  line-height: 52px;
+  font-weight: 650;
+}
+
+.closing-grid {
+  position: absolute;
+  left: 16px;
+  top: 554px;
+  display: grid;
+  width: 1091px;
+  grid-template-columns: repeat(3, 343.667px);
+  gap: 30px;
+  text-align: left;
+}
+
+.closing-grid article {
+  min-height: 300px;
+  display: grid;
+  place-items: center;
+  padding: 50px 32px;
+}
+
+.closing-grid article:nth-child(1) {
+  background:
+    url("data:image/svg+xml;utf8,<svg viewBox='0 0 343.67 300' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><rect x='0' y='0' height='100%' width='100%' fill='url(%23grad)' opacity='1'/><defs><radialGradient id='grad' gradientUnits='userSpaceOnUse' cx='0' cy='0' r='10' gradientTransform='matrix(-95.751 5.4179e-15 0.00000109 70.061 318 11.341)'><stop stop-color='rgba(169,203,255,0.26)' offset='0'/><stop stop-color='rgba(85,101,128,0.13)' offset='0.21'/><stop stop-color='rgba(0,0,0,0)' offset='0.42'/></radialGradient></defs></svg>"),
+    linear-gradient(180deg, rgb(16, 22, 42) 0%, rgb(10, 16, 34) 100%);
+}
+
+.closing-grid article:nth-child(2) {
+  background:
+    url("data:image/svg+xml;utf8,<svg viewBox='0 0 343.67 300' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><rect x='0' y='0' height='100%' width='100%' fill='url(%23grad)' opacity='1'/><defs><radialGradient id='grad' gradientUnits='userSpaceOnUse' cx='0' cy='0' r='10' gradientTransform='matrix(4.1496 -30.732 -42 -3.0363 -10.664 307.32)'><stop stop-color='rgba(255,255,255,0.22)' offset='0'/><stop stop-color='rgba(128,128,128,0.11)' offset='0.43571'/><stop stop-color='rgba(0,0,0,0)' offset='0.87141'/></radialGradient></defs></svg>"),
+    linear-gradient(180deg, rgb(16, 22, 41) 0%, rgb(11, 16, 34) 100%);
+}
+
+.closing-grid article:nth-child(3) {
+  background:
+    url("data:image/svg+xml;utf8,<svg viewBox='0 0 343.67 300' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><rect x='0' y='0' height='100%' width='100%' fill='url(%23grad)' opacity='1'/><defs><radialGradient id='grad' gradientUnits='userSpaceOnUse' cx='0' cy='0' r='10' gradientTransform='matrix(-32.25 -59.89 -143.83 41.465 415.67 112.32)'><stop stop-color='rgba(160,216,255,0.28)' offset='0'/><stop stop-color='rgba(80,108,128,0.14)' offset='0.22'/><stop stop-color='rgba(0,0,0,0)' offset='0.44'/></radialGradient></defs></svg>"),
+    linear-gradient(180deg, rgb(17, 23, 43) 0%, rgb(11, 16, 34) 100%);
+}
+
+.closing-grid h3 {
+  margin: 0;
+  font-size: 27px;
+  line-height: 31.86px;
+  text-align: center;
+}
