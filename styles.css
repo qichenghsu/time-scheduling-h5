@@ -279,7 +279,7 @@ a {
 }
 
 .role-card {
-  height: 235px;
+  height: 300px;
   padding: 26px;
   border-radius: 18px;
   background:
@@ -317,7 +317,7 @@ a {
 }
 
 .role-card h3 {
-  margin: 34px 0 0;
+  margin: 58px 0 0;
   font-size: 24px;
   line-height: normal;
   font-weight: 700;
@@ -346,7 +346,7 @@ a {
   position: absolute;
   z-index: 0;
   left: 71.5px;
-  top: 548px;
+  top: 728px;
   width: 980px;
   height: 566px;
   object-fit: contain;
