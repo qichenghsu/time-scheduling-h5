@@ -822,8 +822,9 @@ blockquote strong {
 }
 
 .employee {
-  left: 617px;
-  width: 272px;
+  left: 543px;
+  width: 420px;
+  white-space: nowrap;
 }
 
 .shift-phone {
